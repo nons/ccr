@@ -1,0 +1,44 @@
+.navbar#pitt
+  .navbar-inner
+    .container
+      = link_to "University of Pittsburgh", "http://www.pitt.edu/", :class => "brand"
+      %ul.nav.pull-right
+        %li
+          = link_to "Pitt Home", "#"
+        %li.divider-vertical
+        %li
+          = link_to "Find People", "#"
+        %li.divider-vertical
+        %li
+          = link_to "Contact Us", "#"
+
+.container#header-image
+
+.navbar#crr-nav
+  .navbar-inner
+    .row.container
+      %ul.nav
+        %li
+          = link_to "CCR Home", "#"
+        %li.divider-vertical
+        %li
+          = link_to "News & Events", "#"
+        %li.divider-vertical
+        %li
+          = link_to "Research", "#"
+        %li.divider-vertical
+        %li.dropdown
+          = link_to "Directory", "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" }
+          %ul.dropdown-menu
+            %li.divider
+            %li Faculty
+            %li.divider
+            %li Post-Docs
+            %li.divider
+            %li Students
+            %li.divider
+            %li etc.
+            %li.divider
+        %li.divider-vertical
+        %li
+          = link_to "Contact Us", "#"
