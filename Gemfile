@@ -2,10 +2,13 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
 gem 'thin'
-gem 'sqlite3'
-gem 'bootstrap-sass'
 gem 'haml'
 gem 'haml-rails'
+
+group :development, :assets, :test do
+  gem 'sqlite3'
+  gem 'bootstrap-sass'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,3 +34,7 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :production do
+  gem 'pg'
+end
