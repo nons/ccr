@@ -24,6 +24,7 @@
   background: $pittGold;
 
   .navbar-inner {
+    filter: none;
     background: inherit;
     background: { image: none; }
   }

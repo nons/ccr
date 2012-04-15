@@ -1,7 +1,7 @@
 .container
   .row
     .span4#left
-      #ccrCarousel.carousel
+      #carousel.carousel
         .carousel-inner
           .active.item
             = image_tag "HE.jpg", :size => "300x300"
@@ -12,9 +12,9 @@
           .item
             = image_tag "MCT3T3.JPG", :size => "300x300"
 
-        %a.left.carousel-control{:href => "#ccrCarousel", :data => { :slide => "prev" } }
+        %a.carousel-control.left{:href => "#carousel", :data => { :slide => "prev" } }
           = '<'
-        %a.right.carousel-control{:href => "#crrCarousel", :data => { :slide => "next"} }
+        %a.carousel-control.right{:href => "#carousel", :data => { :slide => "next"} }
           = '>'
     .span8#right
       %p Just some text.

@@ -15,4 +15,6 @@
 //= require bootstrap
 //= require_tree .
 
-$('.carousel').carousel()
+$(document).ready(function() {
+  $('.carousel').carousel()
+});
