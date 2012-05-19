@@ -10,6 +10,10 @@ group :development, :assets, :test do
   gem 'bootstrap-sass'
 end
 
+group :development do
+  gem 'heroku'
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

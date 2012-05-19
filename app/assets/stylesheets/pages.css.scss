@@ -1,31 +1,50 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$pittGold: #CDCD9A;
+$pittBlue: #000066;
+
+$navbarBackground: $pittBlue;
+$navbarBackgroundHighlight: $pittBlue;
+
+$navbarLinkColor: $pittGold;
+
 @import 'bootstrap';
+
+.navbar-inner {
+  @include border-radius(0);
+}
 
 #pitt {
   margin: { bottom: 0 }
 
   .brand {
     color: $pittGold;
+    font-weight: bold;
   }
 
   .divider-vertical {
     background: { color: $pittGold; }
     border: { right: { color: $pittGold; } }
   }
+
+  ul {
+    padding: { top: 12.5px; }
+  }
 }
 
 #header-image {
-  height: 40 * 3px;
+
+  img {
+    width: 100%;
+  }
 }
 
 #crr-nav {
-  background: $pittGold;
 
   .navbar-inner {
     filter: none;
-    background: inherit;
+    background: $pittGold;
     background: { image: none; }
   }
 
@@ -60,7 +79,21 @@
 
 // Body
 #left, #right {
-  height: 10*40px;
+  min-height: 10*40px;
+}
+
+#carousel {
+  img {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+#pitt-body-logo {
+  background: $pittGold;
+  img {
+    @include center-block();
+  }
 }
 
 // Footer

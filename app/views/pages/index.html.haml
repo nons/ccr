@@ -1,20 +1,143 @@
-.container
-  .row
-    .span4#left
-      #carousel.carousel
-        .carousel-inner
-          .active.item
-            = image_tag "HE.jpg", :size => "300x300"
-            .carousel-caption
-              %p HE.jpg
-          .item
-            = image_tag "MgZnCa_Alloy.JPG", :size => "300x300"
-          .item
-            = image_tag "MCT3T3.JPG", :size => "300x300"
+<!DOCTYPE html>
+%head
+  %title Ccr
+  = stylesheet_link_tag    "application", :media => "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags
 
-        %a.carousel-control.left{:href => "#carousel", :data => { :slide => "prev" } }
-          = '<'
-        %a.carousel-control.right{:href => "#carousel", :data => { :slide => "next"} }
-          = '>'
-    .span8#right
-      %p Just some text.
+  %body
+    .container
+      <!-- Top Header w/ Universy of Pittsburgh Logo -->
+      .navbar#pitt
+        .navbar-inner
+          .container
+            <!-- University of Pittsburgh Logo -->
+            = link_to "http://www.pitt.edu/", :class => 'brand' do
+              = image_tag 'brand.gif'
+
+            <!-- Navigation Menu on Right -->
+            %ul.nav.pull-right
+              <!-- Navigation item -->
+              %li
+                = link_to "Pitt Home", "#"
+              <!-- Item divider -->
+              %li.divider-vertical
+
+              %li
+                = link_to "Find People", "#"
+              %li.divider-vertical
+
+              %li
+                = link_to "Contact Us", "#"
+
+      <!-- Header Image: Center for Craniofacial Regeneration -->
+      .container#header-image
+        = image_tag 'bnr.jpg'
+
+      <!-- Navigation Menu: Gold, below Header-Image -->
+      .navbar#crr-nav
+        .navbar-inner
+          .row.container
+            %ul.nav
+              <!-- Navigation Item -->
+              %li
+                = link_to "CCR Home", "#"
+              <!-- Navigation Item End -->
+
+              <!-- Navigation Divider -->
+              %li.divider-vertical
+              <!-- Navigation Divider End -->
+
+              %li
+                = link_to "News & Events", "#"
+              %li.divider-vertical
+              %li
+                = link_to "Research", "#"
+              %li.divider-vertical
+
+              <!-- Dropdown Navigation Item -->
+              %li.dropdown
+                <!-- Dropdown Item: Click to show dropdown menu -->
+                = link_to "Directory", "#", :class => "dropdown-toggle", :data => { :toggle => "dropdown" }
+                <!-- Dropdown Item Click End -->
+
+                <!-- Dropdown List -->
+                %ul.dropdown-menu
+                  <!-- Dropdown Horizontal Divider -->
+                  %li.divider
+                  <!-- Dropdown Horizontal Divider End -->
+
+                  <!-- Dropdown Item -->
+                  %li Faculty
+                  <!-- Dropdown Item End -->
+                  %li.divider
+                  %li Post-Docs
+                  %li.divider
+                  %li Students
+                  %li.divider
+                  %li etc.
+                  %li.divider
+
+              <!-- Dropdown Navigation Item End -->
+
+              %li.divider-vertical
+              %li
+                = link_to "Contact Us", "#"
+
+      <!-- Body -->
+      .container#body
+        .row
+          <!-- Left Sidebar -->
+          .span4#left
+
+            <!-- Image Carousel -->
+            #carousel.carousel
+              .carousel-inner
+
+                <!-- Image Carousel Item -->
+                .item
+                  = image_tag "he.jpg"
+                  .carousel-caption
+                    %p Caption
+                <!-- Image Carousel Item End -->
+
+                .item.active
+                  = image_tag "mgznca_alloy.jpg"
+                .item
+                  = image_tag "mct3t3.jpg"
+
+              <!-- Carousel Item Controls -->
+              %a.carousel-control.left{:href => "#carousel", :data => { :slide => "prev" } }
+                = '‹'
+              %a.carousel-control.right{:href => "#carousel", :data => { :slide => "next"} }
+                = '›'
+              <!-- Carousel Item Controls End -->
+
+            <!-- Left Sidebar Universy of Pittsburgh Logo -->
+            .well#pitt-body-logo
+              = image_tag 'pitt.png'
+            <!-- Left Sidebar University of Pittsburgh Logo End -->
+
+          <!-- Left Sidebar End -->
+
+          <!-- Right Side Body -->
+          .span8#right
+            %h1 Heading 1
+            %p Just some text.
+            %h2 Heading 2
+            %p Just some text.
+            %h3 Heading 3
+            %p Just some text.
+            %h4 Heading 4
+            %p Just some text.
+            %h5 Heading 5
+            %p Just some text.
+            %h6 Heading 6
+            %p Just some text.
+          <!-- Right Side Body End -->
+
+      <!-- Footer -->
+      .navbar#footer
+        .navbar-inner
+          %p.container &copy Center for Craniofacial Regeneration. All Rights Reserved.
+      <!-- Footer End -->

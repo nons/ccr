@@ -1,15 +1,1 @@
-<!DOCTYPE html>
-%head
-  %title Ccr
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
-
-  %body
-    .container
-      = render 'layouts/header'
-      = yield
-      = render 'layouts/footer'
-
-      - if Rails.env.development?
-        .container= debug params
+= yield
