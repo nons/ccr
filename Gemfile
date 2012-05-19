@@ -10,6 +10,7 @@ group :development, :assets, :test do
 end
 
 group :development do
+  gem 'sqlite3'
   gem 'heroku'
 end
 

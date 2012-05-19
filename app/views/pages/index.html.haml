@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 %head
-  %title Ccr
+  %title Center for Craniofacial Regeneration | University of Pittsburgh
   = stylesheet_link_tag    "application", :media => "all"
   = javascript_include_tag "application"
-  = csrf_meta_tags
+  <!-- Everything above this line needs to be on EVERY PAGE -->
 
   %body
     .container
@@ -32,6 +32,7 @@
 
       <!-- Header Image: Center for Craniofacial Regeneration -->
       .container#header-image
+        %i A program of the School of Dental Medicine and McGowan Institute for Regenerative Medicine
         = image_tag 'bnr.jpg'
 
       <!-- Navigation Menu: Gold, below Header-Image -->
@@ -68,14 +69,14 @@
                   <!-- Dropdown Horizontal Divider End -->
 
                   <!-- Dropdown Item -->
-                  %li Faculty
+                  %li= link_to 'Faculty', '#' 
                   <!-- Dropdown Item End -->
                   %li.divider
-                  %li Post-Docs
+                  %li= link_to 'Post-Docs', '#'
                   %li.divider
-                  %li Students
+                  %li= link_to 'Students', '#'
                   %li.divider
-                  %li etc.
+                  %li= link_to 'etc.', '#'
                   %li.divider
 
               <!-- Dropdown Navigation Item End -->

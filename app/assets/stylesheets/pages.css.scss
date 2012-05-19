@@ -11,6 +11,10 @@ $navbarLinkColor: $pittGold;
 
 @import 'bootstrap';
 
+h1, h2, h3, h4, h5 {
+  color: $pittBlue;
+}
+
 .navbar-inner {
   @include border-radius(0);
 }
@@ -35,8 +39,20 @@ $navbarLinkColor: $pittGold;
 
 #header-image {
 
+  position: relative;
+
   img {
     width: 100%;
+  }
+
+  i { 
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    width: 400px;
+
+    font-size: 120%;
+    color: $pittBlue;
   }
 }
 
@@ -54,8 +70,9 @@ $navbarLinkColor: $pittGold;
       width: 18%;
       a {
         text-align: center;
-        color: black;
+        color: $pittBlue;
         font-size: 120%;
+        font-weight: bold;
       }
     }
 
@@ -71,6 +88,10 @@ $navbarLinkColor: $pittGold;
         text-align: center;
         color: black;
         width: 100%;
+
+        a:hover {
+          background-color: inherit;
+        }
       }
     }
   }
@@ -104,5 +125,6 @@ $navbarLinkColor: $pittGold;
   text: { align: center; }
   p {
     padding: { top: 10px; bottom: 10px; }
+    color: $pittGold;
   }
 }
