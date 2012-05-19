@@ -6,7 +6,6 @@ gem 'haml'
 gem 'haml-rails'
 
 group :development, :assets, :test do
-  gem 'sqlite3'
   gem 'bootstrap-sass'
 end
 
